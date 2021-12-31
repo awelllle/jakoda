@@ -32,7 +32,7 @@ filename: function (req, file, cb) {
 const parser = multer({ storage: storage });
 
 router.use((req, res, next) => {
-    res.render('auth/login.html', {} );   
+      next();
 });
 
 router.post("/compliance",  parser.single('cac'), (req, res) => {
