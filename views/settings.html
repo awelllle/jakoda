@@ -1,0 +1,53 @@
+{% extends "./dashboard-template.html" %}
+{% block body %}
+
+
+    <div class="nk-block-head">
+        <div class="nk-block-head-content">
+            <!-- <div class="nk-block-head-sub"><span>Account Setting</span></div> -->
+            <h2 class="nk-block-title fw-normal">Settings</h2>
+            <div class="nk-block-des">
+                <p>Manage preferences </p>
+            </div>
+        </div>
+    </div><!-- .nk-block-head -->
+
+    <!-- <ul class="nk-nav nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" href="html/crypto/profile.html">Personal</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="html/crypto/profile-security.html">Security</a>
+        </li>
+        <li class="nav-item active current-page">
+            <a class="nav-link" href="html/crypto/profile-notification.html">Notifications</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="html/crypto/profile-connected.html">Connect Social</a>
+        </li>
+    </ul> -->
+    <div class="nk-block">
+        <div class="nk-block-head nk-block-head-sm">
+            <div class="nk-block-head-content">
+                <h5 class="nk-block-title">Settings</h5>
+                <div class="nk-block-des">
+                    <p>Salary payment schedule</p>
+                </div>
+            </div>
+        </div><!-- .nk-block-head -->
+        <div class="nk-block-content">
+            <div class="gy-3">
+                <div class="g-item">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" checked="" id="unusual-activity">
+                        <label class="custom-control-label" for="unusual-activity">Weekly</label>
+                    </div>
+                </div>
+               
+            </div>
+        </div><!-- .nk-block-contnet -->
+      
+    </div><!-- .nk-block -->
+
+
+  {% endblock %}

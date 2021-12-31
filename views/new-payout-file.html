@@ -1,0 +1,47 @@
+{% extends "./dashboard-template.html" %}
+{% block body %}
+
+    <div class="compliance card">
+
+        <div class="comp-header">
+            {% if response %}     
+           
+            <h2 class="tell-us">{{ response }}</h2>
+
+            {% else %}
+            <h2 class="tell-us">Choose file</h2>
+          
+            {% endif %}
+       </div>
+
+       
+
+       <form class="comp-form" action="/newPayoutFile" method="post" enctype="multipart/form-data">
+      
+
+          <div class="form-group">
+           
+            <input type="file" class="form-control-file" name="file" id="file">
+          </div>
+          
+          <div class="pb-2">
+            <input type="submit" class="themeBtn" value="Submit">
+           </div>
+        
+       </form>
+
+
+
+       
+
+
+
+
+
+
+
+
+
+    </div>
+
+  {% endblock %}

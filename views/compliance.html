@@ -1,0 +1,74 @@
+{% extends "./dashboard-template.html" %}
+{% block body %}
+
+<div class="components-preview wide-md mx-auto">
+    <div class="nk-block-head nk-block-head-lg wide-sm">
+        <div class="nk-block-head-content">
+      <h2 class="nk-block-title fw-normal">Tell us about your business</h2>
+            <div class="nk-block-des">
+                <p class="lead">We need this information to verify you</p>
+          </div>
+        </div>
+    </div><!-- .nk-block-head -->
+   
+    <div class="nk-block nk-block-lg">
+      
+
+
+    <div class="card card-bordered card-preview">
+      <div class="card-inner">
+          <div class="preview-block">
+            {% if response %}     
+           
+            <span class="preview-title-lg overline-title">{{ response }}</span>
+
+            {% endif %}
+             
+              <div class="row gy-4">
+                   
+                  <div class="col-sm-6">
+
+                    <form class="comp-form" action="/compliance" method="post" enctype="multipart/form-data">
+
+                      <div class="form-group">
+                          <label class="form-label" >CAC</label>
+                          <div class="form-control-wrap">
+                              <div class="custom-file">
+                                  <input type="file"  class="custom-file-input" name="cac" id="cac">
+                                  <label class="custom-file-label" for="customFile">Choose file</label>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label class="form-label" >Businees Type</label>
+                          <div class="form-control-wrap ">
+                              <div class="form-control-select">
+                                  <select class="form-control" id="type" name="type">
+                                      <option value=""></option>
+                                      <option value="">LLC</option>
+                                      <option value="">Sole Proprietor</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="form-group mt-2">
+                        <input type="submit" class="btn btn-lg btn-primary" value="Submit">
+                      </div>
+                      
+                </form>
+
+
+                  </div>
+   
+              </div>
+            
+              
+          </div>
+      </div>
+  </div><!-- .card-preview -->
+
+
+</div> <!-- nk-block -->
+</div><!-- .components-preview -->
+  {% endblock %}

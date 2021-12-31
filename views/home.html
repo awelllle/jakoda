@@ -1,0 +1,104 @@
+{% extends "./dashboard-template.html" %}
+{% block body %}
+
+
+       
+
+
+            <div class="nk-block-head">
+                <div class="nk-block-head-sub"><span>Welcome!</span>
+                </div>
+                <div class="nk-block-between-md g-4">
+                    <div class="nk-block-head-content">
+                        <h2 class="nk-block-title fw-normal">Nathan</h2>
+                        <div class="nk-block-des">
+                            <p>At a glance summary of your account. Have fun!</p>
+                        </div>
+                    </div><!-- .nk-block-head-content -->
+                    <div class="nk-block-head-content">
+                        <ul class="nk-block-tools gx-3">
+                            <li><a href="#" class="btn btn-primary"><span>Fund Wallet</span> <em class="icon ni ni-arrow-long-right"></em></a></li>
+                            <li><a href="#" class="btn btn-white btn-dim btn-outline-primary"><em class="icon ni ni-download-cloud"></em><span>Export</span></a></li>
+                            <li><a href="#" class="btn btn-white btn-dim btn-outline-primary"><em class="icon ni ni-reports"></em><span>Reports</span></a></li>
+                        </ul>
+                    </div><!-- .nk-block-head-content -->
+                </div><!-- .nk-block-between -->
+            </div><!-- .nk-block-head -->
+            <div class="nk-block">
+                <div class="row gy-gs">
+                    <div class="col-lg-12 col-xl-12">
+                        <div class="nk-block">
+                            <div class="nk-block-head-xs">
+                                <div class="nk-block-head-content">
+                                    <h5 class="nk-block-title title">Overview</h5>
+                                </div>
+                            </div><!-- .nk-block-head -->
+                            <div class="nk-block">
+                                <div class="card card-bordered text-light is-dark h-100">
+                                    <div class="card-inner">
+                                        <div class="nk-wg7">
+                                            <div class="nk-wg7-stats">
+                                                <div class="nk-wg7-title">Available balance</div>
+                                                <div class="number-lg amount">&#8358;179,850.950</div>
+                                            </div>
+                                            <div class="nk-wg7-stats-group">
+                                               
+                                                <div class="nk-wg7-stats w-50">
+                                                    <div class="nk-wg7-title">Transactions</div>
+                                                    <div class="number">34,405</div>
+                                                </div>
+                                            </div>
+                                            <div class="nk-wg7-foot">
+                                                <span class="nk-wg7-note">Last activity at <span>19 Nov, 2021</span></span>
+                                            </div>
+                                        </div><!-- .nk-wg7 -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .nk-block -->
+                        </div><!-- .nk-block -->
+                    </div><!-- .col -->
+                    <div class="col-md-12 col-xl-12">
+                        <div class="card-head">
+                            <div class="card-title mb-0">
+                                <h5 class="title">Balance Flow</h5>
+                            </div>
+                            <div class="card-tools">
+                                <ul class="card-tools-nav">
+                                    <li><a href="#">This Month</a></li>
+                                    <li class="active"><a href="#">This Year</a></li>
+                                </ul>
+                            </div>
+                        </div><!-- .card-title -->
+                        <div class="card card-bordered">
+                            <div class="card-inner">
+                                <div class="nk-wg4">
+                                    <div class="nk-wg4-group justify-center gy-3 gx-4">
+                                        <div class="nk-wg4-item">
+                                            <div class="sub-text">
+                                                <div class="dot dot-lg sq" data-bg="#5ce0aa"></div> <span>Received</span>
+                                            </div>
+                                        </div>
+                                        <div class="nk-wg4-item">
+                                            <div class="sub-text">
+                                                <div class="dot dot-lg sq" data-bg="#798bff"></div> <span>Send</span>
+                                            </div>
+                                        </div>
+                                        <div class="nk-wg4-item">
+                                            <div class="sub-text">
+                                                <div class="dot dot-lg sq" data-bg="#f6ca3e"></div><span>Withdraw</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nk-ck3">
+                                    <canvas class="chart-account-summary" id="summaryBalance"></canvas>
+                                </div>
+                            </div><!-- .card-inner -->
+                        </div><!-- .card -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .nk-block -->
+
+          
+
+  {% endblock %}

@@ -1,0 +1,8 @@
+.user-account-actions:not(:first-child) {
+  margin-top: 0;
+}
+
+.logo-img {
+
+  border-radius: 5px;
+}

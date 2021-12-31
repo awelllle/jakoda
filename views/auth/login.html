@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="zxx" class="js">
+
+<head>
+    <base href="../../">
+    <meta charset="utf-8">
+    <meta name="author" content="Softnio">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Gary from GrowIT">
+    <!-- Fav Icon  -->
+    <link rel="shortcut icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/login.css">
+    <!-- Page Title  -->
+    <title>Dashboard</title>
+   
+</head>
+
+<body>
+
+    <form action="/auth/login" method="post">
+      {% if response %}     
+           
+      <div class="example-alert">
+          <div class="alert alert-fill alert-{{resType}} alert-icon">
+              <em class="icon ni ni-{{ icon }}-circle"></em> <strong>{{ response }}</strong> 
+            </div>
+      </div>
+  
+      {% else %}
+        <h1>Jakoda</h1><br/>
+      
+      {% endif %}
+      
+      <span class="input"></span>
+        <input type="email" name="email" placeholder="Email address" required />
+        <span id="passwordMeter"></span>
+        <input type="password" name="password" id="password" placeholder="Password" required/>
+      
+        <button type="submit" value="Sign Up" title="Submit" class="icon-arrow-right"><span>Sign In</span></button>
+      </form>
+ 
+                
+</body>
+
+</html>
