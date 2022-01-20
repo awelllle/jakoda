@@ -111,5 +111,13 @@ router.get("/activate/:code", (req, res) => {
 });
 
 
+router.get("/logout", (req, res) => {
+ 
+  req.session.destroy()
+     res.redirect('/auth/login');
+
+     
+});
+
 
 module.exports = router;

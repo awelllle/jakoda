@@ -41,7 +41,7 @@
                             <div class="nk-sidebar-widget d-none d-xl-block">
                                 <div class="user-account-info between-center">
                                     <div class="user-account-main">
-                                        <h6 class="overline-title-alt">Wallet Balance</h6>
+                                        <h6 class="overline-title-alt">Account Balance</h6>
                                         <div class="user-balance"><small class="currency currency-btc">&#8358;</small> 179,850.950 </div>
                                         
                                     </div>
@@ -49,7 +49,7 @@
                                
                                 <div class="user-account-actions">
                                     <ul class="g-3">
-                                        <li><a href="#" class="btn btn-lg btn-primary"><span>Fund Wallet</span></a></li>
+                                        <li><a href="#" class="btn btn-lg btn-primary"><span>Add Funds</span></a></li>
                                         <li><a href="#" class="btn btn-lg btn-warning"><span>Withdraw</span></a></li>
                                     </ul>
                                 </div>
@@ -251,6 +251,32 @@
     <script src="{{ STATIC_URL }}js/bundle.js?ver=1.4.0"></script>
     <script src="{{ STATIC_URL }}js/scripts.js?ver=1.4.0"></script>
     <script src="{{ STATIC_URL }}js/charts/chart-crypto.js?ver=1.4.0"></script>
+
+    <script>
+
+        var inactivityTime = function () {
+        var time;
+        window.onload = resetTimer;
+        // DOM Events
+        document.onmousemove = resetTimer;
+        document.onkeydown = resetTimer;
+    
+        function logout() {
+            alert("You are now logged out due to inactivity")
+            window.location.href = '/auth/logout';
+        }
+    
+        function resetTimer() {
+            clearTimeout(time);
+            time = setTimeout(logout, 180000)
+            // 1000 milliseconds = 1 second
+        }
+    };
+    
+    inactivityTime();
+    
+    
+    </script>
 </body>
 
 </html>
