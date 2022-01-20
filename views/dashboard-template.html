@@ -50,7 +50,7 @@
                                 <div class="user-account-actions">
                                     <ul class="g-3">
                                         <li><a href="#" class="btn btn-lg btn-primary"><span>Add Funds</span></a></li>
-                                        <li><a href="#" class="btn btn-lg btn-warning"><span>Withdraw</span></a></li>
+                                        <!-- <li><a href="#" class="btn btn-lg btn-warning"><span>Withdraw</span></a></li> -->
                                     </ul>
                                 </div>
                             </div><!-- .nk-sidebar-widget -->
@@ -62,8 +62,8 @@
                                                 <span>NA</span>
                                             </div>
                                             <div class="user-info">
-                                                <span class="lead-text">Nathan</span>
-                                                <span class="sub-text">nathan@jakoda.com</span>
+                                                <span class="lead-text">{{sess.name}}</span>
+                                                <span class="sub-text">{{sess.email}}</span>
                                             </div>
                                             <div class="user-action">
                                                 <em class="icon ni ni-chevron-down"></em>
@@ -74,7 +74,7 @@
                                 <div class="nk-profile-content toggle-expand-content" data-content="sidebarProfile">
                                     <div class="user-account-info between-center">
                                         <div class="user-account-main">
-                                            <h6 class="overline-title-alt">Wallet Balance</h6>
+                                            <h6 class="overline-title-alt">Account Balance</h6>
                                             <div class="user-balance"> <small class="currency currency-btc">&#8358;</small> 179,850.950</div>
                                           
                                         </div>
@@ -91,7 +91,7 @@
                                         <li><a href="html/crypto/profile-activity.html"><em class="icon ni ni-activity-alt"></em><span>Login Activity</span></a></li>
                                     </ul>
                                     <ul class="link-list">
-                                        <li><a href="#"><em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
+                                        <li><a href="/auth/logout"><em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
                                     </ul>
                                 </div>
                             </div><!-- .nk-sidebar-widget -->
@@ -190,7 +190,7 @@
                                                 </div>
                                                 <div class="user-info d-none d-md-block">
                                                    
-                                                    <div class="user-name dropdown-indicator">Howdy, Nathan</div>
+                                                    <div class="user-name dropdown-indicator">Howdy, {{sess.name}}</div>
                                                 </div>
                                             </div>
                                         </a>
@@ -201,8 +201,8 @@
                                                         <span>NA</span>
                                                     </div>
                                                     <div class="user-info">
-                                                        <span class="lead-text">Nathan</span>
-                                                        <span class="sub-text">nathan@jakoda.com</span>
+                                                        <span class="lead-text">{{sess.name}}</span>
+                                                        <span class="sub-text">{{sess.email}}</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -216,7 +216,7 @@
                                             </div>
                                             <div class="dropdown-inner">
                                                 <ul class="link-list">
-                                                    <li><a href="#"><em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
+                                                    <li><a href="/auth/logout"><em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
                                                 </ul>
                                             </div>
                                         </div>

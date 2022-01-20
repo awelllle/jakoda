@@ -56,33 +56,39 @@ router.post("/compliance",  parser.single('cac'), (req, res) => {
 
 
 router.get("/home", (req, res) => {
-    res.render('home.html', {} );  
+    sess = req.session;
+    res.render('home.html', {sess: sess} );  
  });
 
 
  router.get("/settings", (req, res) => {
-    res.render('settings.html', {} );  
+    sess = req.session;
+    res.render('settings.html', {sess: sess} );  
  });
 
 
 router.get("/transactionHistory", (req, res) => {
-    res.render('transaction-history.html', {} );  
+    sess = req.session;
+    res.render('transaction-history.html', {sess:sess} );  
  });
 
  router.get("/compliance", (req, res) => {
-    res.render('compliance.html', {} );  
+    sess = req.session;
+    res.render('compliance.html', {sess:sess} );  
  });
 
 
  router.get("/manage-payouts", (req, res) => {
+    sess = req.session;
    Payouts.find({ }, (err, items) => {
-      res.render('manage-payouts.html', {items: items});
+      res.render('manage-payouts.html', {items: items, sess:sess});
    });
 });
 
 
 router.get("/newPayoutFile", (req, res) => {
-      res.render('new-payout-file.html', {});
+    sess = req.session;
+      res.render('new-payout-file.html', {sess:sess});
 });
 
 router.post("/newPayoutFile", (req, res) => {
@@ -201,7 +207,7 @@ router.post("/newRecord", (req, res) => {
                   });
              
              
-            res.render('new-record.html', {response: "Record has been saved!",});
+            res.render('new-record.html', {sess:sess, response: "Record has been saved!",});
              
 });
 
