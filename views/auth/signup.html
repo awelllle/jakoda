@@ -12,13 +12,13 @@
     <link rel="shortcut icon" href="./images/favicon.png">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/login.css">
     <!-- Page Title  -->
-    <title>Login | Jakoda</title>
+    <title>Sign Up | Jakoda</title>
    
 </head>
 
 <body>
 
-    <form action="/auth/login" method="post">
+    <form action="/auth/signup" method="post">
       {% if response %}     
            
       <div class="example-alert">
@@ -32,12 +32,25 @@
       
       {% endif %}
       
-      <span class="input"></span>
-        <input type="email" name="email" placeholder="Email address" required />
+         <span class="input"></span>
+        <input type="text" name="fname" placeholder="First Name" required />
+
+        <span class="input"></span>
+        <input type="text" name="lname" placeholder="Last Name" required />
+
+
+        <span class="input"></span>
+        <input type="email" name="email" placeholder="Email" required />
+
+
+        <span class="input"></span>
+        <input type="text" name="phone" placeholder="Phone" required />
+
+
         <span id="passwordMeter"></span>
         <input type="password" name="password" id="password" placeholder="Password" required/>
       
-        <button type="submit" value="Sign Up" title="Submit" class="icon-arrow-right"><span>Sign In</span></button>
+        <button type="submit" value="Sign Up" title="Submit" class="icon-arrow-right"><span>Sign Up</span></button>
       </form>
  
                 

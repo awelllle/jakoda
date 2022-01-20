@@ -1,6 +1,6 @@
 const request = require('request');
 const nodemailer = require('nodemailer');
-
+const jwt  = require('jsonwebtoken');
 
 exports.sendSuccessResponse = function (res, content, message) {
     let data = {
@@ -72,6 +72,15 @@ exports.generateId = (l) => {
     }
 
     return id;
+};
+
+exports.generateToken =  (payload) => {
+       
+    const  options = { expiresIn: '2d'};
+    const  secret  = process.env.JWT_SECRET;
+    const  token   = jwt.sign(payload, secret, options);
+    return token;
+
 };
 
 

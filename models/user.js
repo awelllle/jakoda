@@ -13,6 +13,9 @@ var UserSchema = new Schema({
     cac: String,
     businessType: String,
     compliance: {type: Boolean, default :false},
+
+    activated: {type: Boolean, default:false},
+    activationCode: String,
     
     password: String,
    
