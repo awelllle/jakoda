@@ -23,20 +23,20 @@ exports.sendErrorResponse = function (res, content, message, status) {
 exports.sendEmail = (email, subject, text) => {
 
     var transporter = nodemailer.createTransport({
-        host: 'dynamicgovernancesolutions.ng',
-        port: 465,
-        //service: 'gmail',
+        // host: 'dynamicgovernancesolutions.ng',
+        // port: 465,
+        service: 'gmail',
         auth: {
-            user: 'awele.osuka@dynamicgovernancesolutions.ng',
-            pass: process.env.PASS
+            user: 'cryptocoininvestmentorg@gmail.com',
+            pass: process.env.EMAIL_PASS
         }
         });
      
         var mailOptions = {
-            from: '"Awelle from Iducate" <awele.osuka@dynamicgovernancesolutions.ng>',
+            from: '"Jakoda Support" <cryptocoininvestmentorg@gmail.com>',
             to: email,
             subject: subject,
-            text: text
+            html: text
         };
 
         transporter.sendMail(mailOptions, function(error, info){
