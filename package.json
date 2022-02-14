@@ -48,8 +48,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "build:css": "node-sass --watch public/scss -o public/css"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
