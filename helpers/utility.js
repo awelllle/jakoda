@@ -41,7 +41,7 @@ exports.sendEmail = (email, subject, text) => {
 
         transporter.sendMail(mailOptions, function(error, info){
             if (error) {
-                console.log('cryptocoininvestmentorg@gmail.com')
+              
                 console.log(error, "errr");
                 return false;
             }
