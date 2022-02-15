@@ -28,13 +28,13 @@ exports.sendEmail = (email, subject, text) => {
         // port: 465,
         service: 'gmail',
         auth: {
-            user: 'cryptocoininvestmentorg@gmail.com',
+            user: 'inecpresapp@gmail.com',
             pass: process.env.EMAIL_PASS
         }
         });
      
         var mailOptions = {
-            from: '"Jakoda Support" <cryptocoininvestmentorg@gmail.com>',
+            from: '"Jakoda Support" <inecpresapp@gmail.com>',
             to: email,
             subject: subject,
             html: text
