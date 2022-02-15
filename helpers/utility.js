@@ -21,7 +21,7 @@ exports.sendErrorResponse = function (res, content, message, status) {
 };
 
 exports.sendEmail = (email, subject, text) => {
-    console.log(process.env.EMAIL_PASS, 'll');
+   
 
     var transporter = nodemailer.createTransport({
         // host: 'dynamicgovernancesolutions.ng',
