@@ -35,6 +35,13 @@ router.use((req, res, next) => {
       next();
 });
 
+
+router.get("/", (req, res) => {
+    sess = req.session;
+    res.render('landing/index.html', {sess: sess} );  
+ });
+
+
 router.post("/compliance",  parser.single('cac'), (req, res) => {
    console.log(req.file, req.body);
         
